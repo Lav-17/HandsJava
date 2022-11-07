@@ -48,7 +48,7 @@ public class Controller {
 				case 2:System.out.println("Exception for password");
 				       ws.unRegisterWallet(17,"1417");
 					break;
-				case 3:System.out.println("Exception for password wrong while login");
+				case 3:System.out.println("Exception for password wrong while logins");
 					   ws.unRegisterWallet(1,"1417");
 					break;
 
