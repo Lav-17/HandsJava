@@ -38,7 +38,7 @@ public class WalletDaoImpl implements WalletDao {
 		Wallet a = null;
 
 		try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mywallet", "root", "");
-			 PreparedStatement pt = con.prepareStatement("SELECT * FROM payment WHERE cid=?")) {
+			 PreparedStatement pt = con.prepareStatement("SELECT * FROM payment WHERE id=?")) {
 			pt.setInt(1, walletId);
 
 			ResultSet rs = pt.executeQuery();
@@ -55,7 +55,7 @@ public class WalletDaoImpl implements WalletDao {
 	public Wallet updateWallet(Wallet updateWallet) throws WalletException {
 		Wallet b = null;
 		try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mywallet", "root", "");
-			 PreparedStatement pt = con.prepareStatement("update payment set accbal=? where id=?");
+			 PreparedStatement pt = con.prepareStatement("update payment set abalance=? where id=?");
 			 PreparedStatement ptd = con.prepareStatement("SELECT * FROM payment WHERE id=?")){
 			pt.setDouble(1,updateWallet.getBalance());
 			pt.setInt(2,updateWallet.getId());

@@ -66,7 +66,7 @@ public class WalletServiceImpl implements WalletService {
 		frombal = fromacc.getBalance();
 
 		if(frombal>=amount) {
-			frombal =- amount;
+			frombal = frombal - amount;
 			fromacc.setBalance(frombal);
 			this.walletRepository.updateWallet(fromacc);
 			tobal = amount + toacc.getBalance();

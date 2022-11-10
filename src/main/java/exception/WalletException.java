@@ -2,8 +2,8 @@ package exception;
 
 public class WalletException extends Exception{
 
-    public WalletException(String toString) {
+    public WalletException(String message) {
 
-        super(toString);
+        super(message);
     }
 }

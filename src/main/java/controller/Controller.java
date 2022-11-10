@@ -20,7 +20,7 @@ public class Controller {
 		try {
 			System.out.println("Adding new account");
 			Wallet x,y,z;
-			x=new Wallet(1 ,"Lavanya",100.00,"123");
+			x=new Wallet(1 ,"Lavanya",1000.00,"123");
 			y=new Wallet(2,"Vedha",200.00,"1234");
 			z=new Wallet(3,"Kannan",300.00,"12345");
 			System.out.println(ws.registerWallet(x));
@@ -54,7 +54,7 @@ public class Controller {
 
 			}
 
-		} catch (WalletException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
